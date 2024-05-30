@@ -1,0 +1,12 @@
+<template>
+    <v-card>
+        <v-card-item></v-card-item>
+        <v-text-field
+            v-model="name"
+            :counter="10"
+            :rules="nameRules"
+            label="Name"
+            required
+        ></v-text-field>
+    </v-card>
+</template>
