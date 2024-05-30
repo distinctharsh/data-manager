@@ -1,6 +1,7 @@
 <template>
-    <div>
-        <h1>Hello world !!!</h1>
-        <v-btn color="primary">Button</v-btn>
-    </div>
+    <router-view v-slot="{ Component, route }">
+        <div :key="route.name">
+            <Component :is="Component" />
+        </div>
+    </router-view>
 </template>
