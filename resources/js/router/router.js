@@ -9,6 +9,12 @@ const routes = [
         path: "/test",
         component: () => import("../Pages/TestRoute.vue"),
     },
+
+
+    {
+        path: '/:pathMatch(.*)*',
+        component: () => import("../Pages/NotFound.vue"),
+    }
 ];
 
 export default createRouter({

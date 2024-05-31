@@ -14,6 +14,26 @@ use Illuminate\Support\Facades\Route;
 // so what we have to do is given below: 
 
 
+Route::get("api/test-me", function () {
+    return response()->json(['message' => 'Hello from Laravel!']);
+});
+
+//keep it down when you want to test something without validation of client-side rendered
+
 Route::get('/{vue_capture?}', function () {
     return view('welcome');
 })->where('vue_capture', '[\/\w\.-]*');
+
+
+// Route::get('/{vue_capture?}', function () {
+//     return view('welcome');
+// })->where('vue_capture', '[\/\w\.-]*');
+
+
+// Route::get('/{vue_capture}', function () {
+//     return view('welcome');
+// })->where('vue_capture', '[\/\w\.-]*');
+
+
+// Note: the question mark says that parameter is optional like , /home, /about yes /  also  means root allowed
+//  and the other without questionmark says paramater is required. like /home, /about    but not /
