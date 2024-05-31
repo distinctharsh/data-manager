@@ -2,12 +2,16 @@ import { createRouter, createWebHistory } from "vue-router";
 
 const routes = [
     {
-        path: "/",
-        component: () => import("../Pages/HomeRoute.vue"),
+        path: '/',
+        redirect: '/dashboard'
     },
     {
-        path: "/test",
-        component: () => import("../Pages/TestRoute.vue"),
+        path: "/dashboard",
+        component: () => import("../Pages/Dashboard.vue"),
+    },
+    {
+        path: "/upload",
+        component: () => import("../Pages/Upload.vue"),
     },
 
 
