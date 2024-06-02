@@ -42,12 +42,9 @@ export default {
     },
     methods: {
         login() {
-            // Add your login logic here
-            // For example, set a token in localStorage
             if (this.email && this.password) {
-                // Simulate an API call to authenticate the user
                 localStorage.setItem("user", "authenticated");
-                store.setUser({ email: this.email }); // Set user in the store
+                store.setUser({ email: this.email });
                 this.$router.push("/dashboard");
             } else {
                 alert("Please fill in both fields.");
