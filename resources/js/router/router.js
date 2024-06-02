@@ -24,7 +24,7 @@ const routes = [
     },
     {
         path: '/login',
-        component: () => import('../layouts/login.vue'),
+        component: () => import('../Pages/Login.vue'),
     },
     {
         path: '/:pathMatch(.*)*',
